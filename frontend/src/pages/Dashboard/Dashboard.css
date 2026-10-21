@@ -1,0 +1,391 @@
+.dashboard-page {
+    min-height: 100%;
+    color: var(--color-ink);
+}
+
+.dashboard-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    margin: 2px 0 28px;
+}
+
+.dashboard-eyebrow {
+    margin: 0 0 8px;
+    color: var(--color-muted);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.dashboard-subtitle {
+    margin: 9px 0 0;
+    color: var(--color-muted);
+    font-size: 14px;
+}
+
+.dashboard-date {
+    flex: none;
+    padding: 9px 12px;
+    border: 1px solid var(--color-line);
+    border-radius: 6px;
+    background: var(--color-surface);
+    color: #48566c;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.dashboard-error {
+    margin: 0 0 18px;
+    border-left: 3px solid var(--color-danger);
+    padding: 11px 14px;
+    background: var(--color-danger-soft);
+    color: var(--color-danger);
+    font-size: 13px;
+}
+
+.dashboard-metrics {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.dashboard-metric {
+    --metric-accent: var(--color-primary);
+    position: relative;
+    display: flex;
+    min-height: 146px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: hidden;
+    border: 1px solid var(--color-line);
+    border-radius: 8px;
+    padding: 19px 20px;
+    background: var(--color-surface);
+}
+
+.dashboard-metric::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--metric-accent);
+    content: '';
+}
+
+.dashboard-metric-label {
+    color: var(--color-muted);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.dashboard-metric strong {
+    margin-top: 8px;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+}
+
+.dashboard-metric-note {
+    margin-top: 10px;
+    color: var(--color-subtle);
+    font-size: 11px;
+}
+
+.dashboard-shortcuts {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 22px;
+    margin: 17px 0 24px;
+    border-bottom: 1px solid var(--color-line);
+    padding: 0 2px 17px;
+}
+
+.dashboard-shortcuts-label {
+    color: var(--color-muted);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.dashboard-shortcuts a,
+.dashboard-text-link {
+    color: var(--color-primary-ink);
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.dashboard-shortcuts a:hover,
+.dashboard-text-link:hover {
+    color: var(--color-primary-hover);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.dashboard-shortcuts a span,
+.dashboard-text-link span {
+    margin-left: 4px;
+}
+
+.dashboard-content-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+    gap: 16px;
+}
+
+.dashboard-panel {
+    min-width: 0;
+    border: 1px solid var(--color-line);
+    border-radius: 8px;
+    background: var(--color-surface);
+}
+
+.dashboard-panel-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    border-bottom: 1px solid var(--color-line-soft);
+    padding: 17px 19px 15px;
+}
+
+.dashboard-panel-heading .dashboard-eyebrow {
+    margin-bottom: 5px;
+}
+
+.dashboard-panel-heading h2 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.dashboard-text-link {
+    flex: none;
+    font-size: 11px;
+}
+
+.dashboard-empty {
+    margin: 0;
+    padding: 26px 19px;
+    color: var(--color-muted);
+    font-size: 13px;
+}
+
+.dashboard-course-row {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    min-height: 70px;
+    border-bottom: 1px solid var(--color-line-soft);
+    padding: 10px 19px;
+}
+
+.dashboard-course-row:last-child,
+.dashboard-enrollment-row:last-child {
+    border-bottom: 0;
+}
+
+.dashboard-course-date {
+    display: flex;
+    width: 42px;
+    height: 46px;
+    flex: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background: var(--color-primary-soft);
+    color: var(--color-primary-ink);
+    font-variant-numeric: tabular-nums;
+}
+
+.dashboard-course-date strong {
+    font-size: 17px;
+    line-height: 1;
+}
+
+.dashboard-course-date span {
+    margin-top: 3px;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.dashboard-course-info,
+.dashboard-enrollment-info {
+    display: flex;
+    min-width: 0;
+    flex: 1;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.dashboard-course-info strong,
+.dashboard-enrollment-info strong {
+    overflow: hidden;
+    color: var(--color-ink);
+    font-size: 12px;
+    font-weight: 650;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dashboard-course-info span,
+.dashboard-enrollment-info span {
+    overflow: hidden;
+    color: var(--color-muted);
+    font-size: 11px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dashboard-status {
+    flex: none;
+    border-radius: 4px;
+    padding: 4px 7px;
+    background: var(--color-success-soft);
+    color: var(--color-success);
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.dashboard-enrollment-row {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    min-height: 62px;
+    border-bottom: 1px solid var(--color-line-soft);
+    padding: 9px 17px;
+}
+
+.dashboard-avatar {
+    display: grid;
+    width: 34px;
+    height: 34px;
+    flex: none;
+    place-items: center;
+    border: 1px solid var(--color-line);
+    border-radius: 50%;
+    background: var(--color-primary-soft);
+    color: var(--color-primary-ink);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.dashboard-enrollment-row time {
+    flex: none;
+    color: var(--color-subtle);
+    font-size: 10px;
+}
+
+.dashboard-footer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 24px;
+    color: var(--color-subtle);
+    font-size: 10px;
+}
+
+.dashboard-footer-mark {
+    display: grid;
+    width: 22px;
+    height: 22px;
+    place-items: center;
+    border-radius: 5px;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.dashboard-footer-line {
+    height: 1px;
+    flex: 1;
+    background: var(--color-line);
+}
+
+@media (max-width: 960px) {
+    .dashboard-metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .dashboard-content-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 560px) {
+    .dashboard-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
+        margin-bottom: 20px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 25px;
+    }
+
+    .dashboard-subtitle {
+        max-width: 34ch;
+        line-height: 1.5;
+    }
+
+    .dashboard-date {
+        padding: 7px 10px;
+    }
+
+    .dashboard-metrics {
+        gap: 10px;
+    }
+
+    .dashboard-metric {
+        min-height: 125px;
+        padding: 15px;
+    }
+
+    .dashboard-metric strong {
+        font-size: 29px;
+    }
+
+    .dashboard-shortcuts {
+        gap: 12px 16px;
+    }
+
+    .dashboard-shortcuts-label {
+        flex-basis: 100%;
+    }
+
+    .dashboard-panel-heading {
+        padding: 15px;
+    }
+
+    .dashboard-course-row {
+        gap: 10px;
+        padding: 10px 13px;
+    }
+
+    .dashboard-enrollment-row {
+        gap: 9px;
+        padding: 9px 13px;
+    }
+
+    .dashboard-footer {
+        flex-wrap: wrap;
+    }
+}

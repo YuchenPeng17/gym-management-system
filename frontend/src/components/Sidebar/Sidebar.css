@@ -1,0 +1,63 @@
+@reference "tailwindcss";
+
+.app-sidebar {
+    @apply sticky top-0 flex h-screen flex-col border-r border-slate-200 bg-white px-4 py-5;
+}
+
+.sidebar-brand {
+    @apply mb-9 flex items-center gap-3 px-1 text-slate-900 no-underline;
+}
+
+.sidebar-brand-mark {
+    @apply grid h-9 w-9 shrink-0 place-items-center rounded-lg text-sm font-bold text-white;
+    background: var(--color-primary);
+}
+
+.sidebar-brand-copy {
+    @apply grid gap-0.5;
+}
+
+.sidebar-brand-copy strong {
+    @apply text-sm font-bold leading-none;
+}
+
+.sidebar-brand-copy small {
+    @apply text-[10px] text-slate-500;
+}
+
+.sidebar-nav {
+    @apply grid gap-1;
+}
+
+.sidebar-nav-group {
+    @apply min-w-0;
+}
+
+.sidebar-link {
+    @apply flex min-h-10 items-center rounded-md px-3 text-xs font-medium text-slate-600 no-underline transition-colors hover:bg-slate-100 hover:text-slate-900;
+}
+
+.sidebar-link.active {
+    @apply font-semibold;
+    background: var(--color-primary-soft);
+    color: var(--color-primary-ink);
+    box-shadow: inset 3px 0 0 var(--color-primary);
+}
+
+@media (max-width: 760px) {
+    .app-sidebar {
+        @apply items-center px-2;
+    }
+
+    .sidebar-brand {
+        @apply mb-8 px-0;
+    }
+
+    .sidebar-brand-copy {
+        @apply hidden;
+    }
+
+    .sidebar-link {
+        @apply justify-center overflow-hidden px-1 text-center text-[10px];
+    }
+}

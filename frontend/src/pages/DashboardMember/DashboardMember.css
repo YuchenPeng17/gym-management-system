@@ -1,0 +1,375 @@
+.member-dashboard {
+    min-height: 100%;
+    color: var(--color-ink);
+}
+
+.member-dashboard-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    margin: 2px 0 24px;
+}
+
+.member-dashboard-eyebrow {
+    margin: 0 0 8px;
+    color: var(--color-muted);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.member-dashboard-header h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.member-dashboard-subtitle {
+    margin: 9px 0 0;
+    color: var(--color-muted);
+    font-size: 14px;
+}
+
+.member-dashboard-browse,
+.member-dashboard-text-link,
+.member-dashboard-empty a,
+.member-dashboard-all-courses {
+    color: var(--color-primary-ink);
+    font-size: 12px;
+    font-weight: 650;
+    text-decoration: none;
+}
+
+.member-dashboard-browse {
+    flex: none;
+    border: 1px solid var(--color-line);
+    border-radius: 5px;
+    padding: 10px 13px;
+    background: var(--color-surface);
+}
+
+.member-dashboard-browse:hover,
+.member-dashboard-text-link:hover,
+.member-dashboard-empty a:hover,
+.member-dashboard-all-courses:hover {
+    color: var(--color-primary-hover);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.member-dashboard-browse span,
+.member-dashboard-text-link span,
+.member-dashboard-empty a span,
+.member-dashboard-all-courses span {
+    margin-left: 4px;
+}
+
+.member-dashboard-membership {
+    position: relative;
+    display: flex;
+    min-height: 186px;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    border-radius: 8px;
+    padding: 26px 32px;
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.member-dashboard-membership::after {
+    position: absolute;
+    top: -95px;
+    right: 18%;
+    width: 270px;
+    height: 270px;
+    border: 1px solid rgb(255 255 255 / 10%);
+    border-radius: 50%;
+    box-shadow: 0 0 0 28px rgb(255 255 255 / 3%), 0 0 0 58px rgb(255 255 255 / 2%);
+    content: "";
+    pointer-events: none;
+}
+
+.member-dashboard-membership .member-dashboard-eyebrow {
+    color: #dbeafe;
+}
+
+.member-dashboard-tenure {
+    display: flex;
+    align-items: baseline;
+    gap: 9px;
+    margin: 0;
+}
+
+.member-dashboard-tenure strong {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+}
+
+.member-dashboard-tenure span {
+    color: #dbeafe;
+    font-size: 14px;
+}
+
+.member-dashboard-membership-note {
+    margin: 10px 0 0;
+    color: #dbeafe;
+    font-size: 12px;
+}
+
+.member-dashboard-membership-aside {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    color: #dbeafe;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.member-dashboard-membership-mark {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    border: 1px solid rgb(255 255 255 / 35%);
+    border-radius: 50%;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.member-dashboard-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.member-dashboard-panel {
+    min-width: 0;
+    border: 1px solid var(--color-line);
+    border-radius: 8px;
+    background: var(--color-surface);
+}
+
+.member-dashboard-panel-heading {
+    display: flex;
+    min-height: 74px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    border-bottom: 1px solid var(--color-line-soft);
+    padding: 14px 18px;
+}
+
+.member-dashboard-panel-heading .member-dashboard-eyebrow {
+    margin-bottom: 5px;
+}
+
+.member-dashboard-panel-heading h2 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.member-dashboard-text-link {
+    flex: none;
+    font-size: 11px;
+}
+
+.member-dashboard-course-row {
+    display: flex;
+    min-height: 72px;
+    align-items: center;
+    gap: 13px;
+    border-bottom: 1px solid var(--color-line-soft);
+    padding: 10px 18px;
+}
+
+.member-dashboard-course-row:last-child,
+.member-dashboard-pick-row:last-child {
+    border-bottom: 0;
+}
+
+.member-dashboard-course-date {
+    display: flex;
+    width: 44px;
+    height: 48px;
+    flex: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background: var(--color-primary-soft);
+    color: var(--color-primary-ink);
+    font-variant-numeric: tabular-nums;
+}
+
+.member-dashboard-course-date span {
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.member-dashboard-course-date strong {
+    margin-top: 2px;
+    font-size: 18px;
+    line-height: 1;
+}
+
+.member-dashboard-course-info {
+    display: flex;
+    min-width: 0;
+    flex: 1;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.member-dashboard-course-info strong {
+    overflow: hidden;
+    color: var(--color-ink);
+    font-size: 12px;
+    font-weight: 650;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.member-dashboard-course-info span {
+    color: var(--color-muted);
+    font-size: 11px;
+}
+
+.member-dashboard-course-arrow,
+.member-dashboard-pick-arrow {
+    flex: none;
+    color: var(--color-subtle);
+    font-size: 14px;
+}
+
+.member-dashboard-empty {
+    display: flex;
+    min-height: 190px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    text-align: center;
+}
+
+.member-dashboard-empty p {
+    margin: 11px 0 8px;
+    color: var(--color-muted);
+    font-size: 13px;
+}
+
+.member-dashboard-empty a {
+    font-size: 11px;
+}
+
+.member-dashboard-empty-mark {
+    display: grid;
+    width: 32px;
+    height: 32px;
+    place-items: center;
+    border: 1px solid var(--color-line);
+    border-radius: 50%;
+    color: var(--color-primary-ink);
+    font-size: 18px;
+}
+
+.member-dashboard-empty--compact {
+    min-height: 150px;
+}
+
+.member-dashboard-empty--compact p {
+    margin-top: 0;
+}
+
+.member-dashboard-pick-row {
+    display: flex;
+    min-height: 58px;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid var(--color-line-soft);
+    padding: 10px 18px;
+}
+
+.member-dashboard-pick-number {
+    color: var(--color-primary-ink);
+    font-size: 10px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+}
+
+.member-dashboard-pick-row strong {
+    min-width: 0;
+    flex: 1;
+    overflow: hidden;
+    color: var(--color-ink);
+    font-size: 12px;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.member-dashboard-all-courses {
+    display: block;
+    margin: 7px 18px 16px;
+    font-size: 11px;
+}
+
+@media (max-width: 900px) {
+    .member-dashboard-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 560px) {
+    .member-dashboard-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 19px;
+    }
+
+    .member-dashboard-header h1 {
+        font-size: 25px;
+    }
+
+    .member-dashboard-subtitle {
+        max-width: 34ch;
+        line-height: 1.5;
+    }
+
+    .member-dashboard-membership {
+        min-height: 164px;
+        padding: 22px 20px;
+    }
+
+    .member-dashboard-membership::after {
+        right: -20%;
+    }
+
+    .member-dashboard-tenure strong {
+        font-size: 42px;
+    }
+
+    .member-dashboard-membership-aside {
+        display: none;
+    }
+
+    .member-dashboard-panel-heading {
+        padding: 14px;
+    }
+
+    .member-dashboard-course-row,
+    .member-dashboard-pick-row {
+        padding-right: 13px;
+        padding-left: 13px;
+    }
+}
